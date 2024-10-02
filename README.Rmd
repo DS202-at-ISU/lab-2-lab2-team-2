@@ -3,10 +3,7 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit the README.Rmd file -->
-# Work Distribution:
-# Sristhi - Worked on Question 1
-# Alister - Worked on Question 2, 3
-# Jacob - Worked on Question 4
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -82,7 +79,7 @@ Neighborhood: factor variable - levels indicate neighborhood area in Ames.
 
 sale_price_range <- range(ames$`Sale Price`)
 sale_price_range
-
+?ames
 
 ```
 # The range of the Sale Price is between 0 and 205,00000
@@ -93,16 +90,10 @@ sale_price_range
 library(ggplot2)
 
 ggplot(data = ames, aes(x = `Sale Price`)) + geom_histogram()
-
 ```
 # Most of the house sale price are clustered on a specific price range and there are some outliers according to the histogram
-
-
-
-
-# Q4 (Alister)
-# I chose the TotalLivingArea as the relation with the Sale Price
 ```{r}
+
 
 ggplot(data = ames, aes(x = `Sale Price`, y = `TotalLivingArea (sf)`)) + geom_point()
 
@@ -118,12 +109,6 @@ ggplot(data = ames, aes(x = `Sale Price`, y = `TotalLivingArea (sf)`)) + geom_po
 
 # Q4. (Jacob)
 ```{r}
-salesPriceRange <- max(initial_Data$'Sale Price', na.rm = TRUE) - min(initial_Data$'Sale Price', na.rm = TRUE)
-print(salesPriceRange)
-
 ggplot(ames, aes(x= log(`Sale Price`), y= Bedrooms)) + geom_point()
 ```
 # From the scatter plot of Bedrooms and Sale Price shows that the number of bedrooms dont not hava a large effect on the sale price. There are a number of houses with low bedroom count and high price and low price and high bedroom count. From the scatter plot the oddities seem to be that there is little corrilation between number of bedrooms and sale price.
-
-
-
