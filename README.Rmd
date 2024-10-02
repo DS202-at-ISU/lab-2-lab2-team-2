@@ -35,5 +35,11 @@ names(initial_Data)
 ```{r}
 str(initial_Data)
 ```
-# The variable of special interest will be the Sale Price
+
+
+
+# Q2. The variable of special interest will be the Sale Price
+
+
+# Q3. 
 
