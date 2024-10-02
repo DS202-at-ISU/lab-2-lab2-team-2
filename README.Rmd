@@ -34,9 +34,40 @@ names(initial_Data)
 ```
 ```{r}
 str(initial_Data)
+summary(initial_Data)
 ```
+Variable descriptions:
 
-
+Parcel ID: character with ID.
+Address: property address in Ames, IA.
+Style: factor variable detailing the type of housing.
+Occupancy: factor variable of type of housing.
+Sale Date: date of sale.
+Sale Price:
+  sales price (in US dollar). 
+  Range: 0-449664
+Multi Sale: logical value: was this sale part of a package?
+YearBuilt: 
+  integer value the year in which the house was built.
+  Range: between 1940-2006
+Acres: 
+  acres of the lot.
+  Range: 0.0270 to 0.4940
+TotalLivingArea (sf): 
+  total living area in square feet.
+  Range: between 771-2223
+Bedrooms: 
+  number of bedrooms.
+  Range: between 1-4
+FinishedBsmtArea (sf): 
+  total area of the finished basement in square feet.
+  Range: between 890-1261
+LotArea(sf): 
+  total lot area in square feet.
+  Range: between 1181-21533 
+AC: logical value: does the property have an AC?
+FirePlace: logical value: does the property have an fireplace?
+Neighborhood: factor variable - levels indicate neighborhood area in Ames. 
 
 # Q2. The variable of special interest will be the Sale Price
 
