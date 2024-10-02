@@ -3,7 +3,10 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit the README.Rmd file -->
-
+# Work Distribution:
+# Sristhi - Worked on Question 1
+# Alister - Worked on Question 2, 3
+# Jacob - Worked on Question 4
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -95,6 +98,17 @@ ggplot(data = ames, aes(x = `Sale Price`)) + geom_histogram()
 
 
 
+
+# Q4 (Alister)
+# I chose the TotalLivingArea as the relation with the Sale Price
+```{r}
+
+ggplot(data = ames, aes(x = `Sale Price`, y = `TotalLivingArea (sf)`)) + geom_point()
+
+
+
+```
+# From the scatterplot, we can see that most houses in the Sale Price range of 0.0e+00 have different TotalLivingArea (sf). There appears to have some houses with higher Sale Price but much smaller TotalLivingArea (sf). The oddities according to the scatterplot is that there is no clear relationships between the Sale Price and the TotalLivingArea (sf)
 
 
 
