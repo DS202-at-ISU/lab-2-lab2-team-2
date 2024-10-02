@@ -21,6 +21,19 @@ Submit a link to your repository on Canvas (only one submission per team) to sig
 ```{r}
 library(classdata)
 
-
 ```
+
+
+# Inspect the dataset
+
+# Variables and their types in the dataset
+```{r}
+
+initial_Data <- head(ames)
+names(initial_Data)
+```
+```{r}
+str(initial_Data)
+```
+# The variable of special interest will be the Sale Price
 
