@@ -116,16 +116,14 @@ ggplot(data = ames, aes(x = `Sale Price`, y = `TotalLivingArea (sf)`)) + geom_po
 
 
 
-# Q4.
+# Q4. (Jacob)
 ```{r}
 salesPriceRange <- max(initial_Data$'Sale Price', na.rm = TRUE) - min(initial_Data$'Sale Price', na.rm = TRUE)
 print(salesPriceRange)
 
-
-ggplot(ames, aes(x= `Sale Price`, y= `LotArea(sf)`)) + geom_point()
-ggplot(ames, aes(x= `Sale Price`, y= Acres)) + geom_point()
+ggplot(ames, aes(x= log(`Sale Price`), y= Bedrooms)) + geom_point()
 ```
-
+# From the scatter plot of Bedrooms and Sale Price shows that the number of bedrooms dont not hava a large effect on the sale price. There are a number of houses with low bedroom count and high price and low price and high bedroom count. From the scatter plot the oddities seem to be that there is little corrilation between number of bedrooms and sale price.
 
 
 
