@@ -78,7 +78,7 @@ Neighborhood: factor variable - levels indicate neighborhood area in Ames.
 
 sale_price_range <- range(ames$`Sale Price`)
 sale_price_range
-
+?ames
 
 ```
 # The range of the Sale Price is between 0 and 205,00000
@@ -89,12 +89,9 @@ sale_price_range
 library(ggplot2)
 
 ggplot(data = ames, aes(x = `Sale Price`)) + geom_histogram()
-
 ```
 # Most of the house sale price are clustered on a specific price range and there are some outliers according to the histogram
-
-
-
-
-
-
+```{r}
+#ScatterPlot of the 
+ggplot(data = ames, aes(x=`Sale Price`, y=Neighborhood)) + 
+    geom_point()
