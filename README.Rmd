@@ -3,7 +3,10 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit the README.Rmd file -->
-
+# Work Distribution:
+# Sristhi - Worked on Question 1
+# Alister - Worked on Question 2, 3
+# Jacob - Worked on Question 4
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -35,14 +38,80 @@ names(initial_Data)
 ```
 ```{r}
 str(initial_Data)
+summary(initial_Data)
 ```
+Variable descriptions:
 
-
+Parcel ID: character with ID.
+Address: property address in Ames, IA.
+Style: factor variable detailing the type of housing.
+Occupancy: factor variable of type of housing.
+Sale Date: date of sale.
+Sale Price:
+  sales price (in US dollar). 
+  Range: 0-449664
+Multi Sale: logical value: was this sale part of a package?
+YearBuilt: 
+  integer value the year in which the house was built.
+  Range: between 1940-2006
+Acres: 
+  acres of the lot.
+  Range: 0.0270 to 0.4940
+TotalLivingArea (sf): 
+  total living area in square feet.
+  Range: between 771-2223
+Bedrooms: 
+  number of bedrooms.
+  Range: between 1-4
+FinishedBsmtArea (sf): 
+  total area of the finished basement in square feet.
+  Range: between 890-1261
+LotArea(sf): 
+  total lot area in square feet.
+  Range: between 1181-21533 
+AC: logical value: does the property have an AC?
+FirePlace: logical value: does the property have an fireplace?
+Neighborhood: factor variable - levels indicate neighborhood area in Ames. 
 
 # Q2. The variable of special interest will be the Sale Price
 
 
 # Q3. 
+# Range of the Sale Price:
+```{r}
+
+sale_price_range <- range(ames$`Sale Price`)
+sale_price_range
+
+
+```
+# The range of the Sale Price is between 0 and 205,00000
+
+# Histogram for the Sale Price
+```{r}
+
+library(ggplot2)
+
+ggplot(data = ames, aes(x = `Sale Price`)) + geom_histogram()
+
+```
+# Most of the house sale price are clustered on a specific price range and there are some outliers according to the histogram
+
+
+
+
+# Q4 (Alister)
+# I chose the TotalLivingArea as the relation with the Sale Price
+```{r}
+
+ggplot(data = ames, aes(x = `Sale Price`, y = `TotalLivingArea (sf)`)) + geom_point()
+
+
+
+```
+# From the scatterplot, we can see that most houses in the Sale Price range of 0.0e+00 have different TotalLivingArea (sf). There appears to have some houses with higher Sale Price but much smaller TotalLivingArea (sf). The oddities according to the scatterplot is that there is no clear relationships between the Sale Price and the TotalLivingArea (sf)
+
+
 
 
 
