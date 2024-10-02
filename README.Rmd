@@ -20,6 +20,7 @@ Submit a link to your repository on Canvas (only one submission per team) to sig
 
 ```{r}
 library(classdata)
+library(ggplot2)
 
 ```
 
@@ -42,4 +43,20 @@ str(initial_Data)
 
 
 # Q3. 
+
+
+
+
+# Q4.
+```{r}
+salesPriceRange <- max(initial_Data$'Sale Price', na.rm = TRUE) - min(initial_Data$'Sale Price', na.rm = TRUE)
+print(salesPriceRange)
+
+
+ggplot(ames, aes(x= `Sale Price`, y= `LotArea(sf)`)) + geom_point()
+ggplot(ames, aes(x= `Sale Price`, y= Acres)) + geom_point()
+```
+
+
+
 
